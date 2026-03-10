@@ -1,0 +1,5 @@
+ComputeTarget(name="githubcluster")
+entry_script="train.py"
+source_directory="code/train"
+script_params={"--kernel": "linear", "--penalty": 1.0}
+pip_packages=["azureml-dataprep[pandas,fuse]", "scikit-learn", "pandas", "matplotlib"]
