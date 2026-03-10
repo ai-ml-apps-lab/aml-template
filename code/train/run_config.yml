@@ -1,0 +1,17 @@
+script: train.py
+
+arguments:
+  --kernel linear
+  --penalty 1.0
+
+compute_target: githubcluster
+
+environment:
+  python:
+    userManagedDependencies: false
+    interpreterPath: python
+  pip:
+    - azureml-dataprep[pandas,fuse]
+    - scikit-learn
+    - pandas
+    - matplotlib
