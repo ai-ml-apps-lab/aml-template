@@ -3,10 +3,7 @@ from azureml.train.estimator import Estimator
 
 def main(workspace):
 
-    compute_target = ComputeTarget(
-        workspace=workspace,
-        name="githubcluster"
-    )
+    compute_target = ComputeTarget(workspace=workspace, name="githubcluster")
 
     script_params = {
         "--kernel": "linear",
@@ -19,7 +16,6 @@ def main(workspace):
         script_params=script_params,
         compute_target=compute_target,
         pip_packages=[
-            "azureml-dataprep[pandas,fuse]",
             "scikit-learn",
             "pandas",
             "matplotlib"
