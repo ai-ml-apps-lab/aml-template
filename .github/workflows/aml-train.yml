@@ -31,7 +31,7 @@ jobs:
       uses: Azure/aml-run@v1
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
-
+          parameters_file: code/train/run_config.py
     - name: comment PR
       uses: unsplash/comment-on-pr@master
       env:
